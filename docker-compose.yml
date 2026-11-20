@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    ports:
+      - "${API_PORT:-8000}:8000" # API_PORT=8080 docker compose up, if 8000 is taken
+    env_file:
+      - path: .env
+        required: false # starts without a .env: fake LLM + random JWT secret
+    volumes:
+      - app-data:/app/data
+      - ./evaluation/results:/app/evaluation/results # eval runs inside the container land in the repo
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  app-data:

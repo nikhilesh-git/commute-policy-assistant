@@ -1,0 +1,23 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# runtime data (SQLite, Chroma)
+data/
+
+# the assignment brief belongs to the company that issued it
+*.docx
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

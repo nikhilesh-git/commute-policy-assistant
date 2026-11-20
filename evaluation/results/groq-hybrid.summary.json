@@ -1,0 +1,52 @@
+{
+  "run": {
+    "llm": "groq",
+    "model": "qwen/qwen3.8-27b",
+    "retrieval": "hybrid",
+    "repeat": 2,
+    "cases": 40,
+    "finished_at": "2026-11-20T16:27:45+00:00",
+    "wall_clock_s": 596
+  },
+  "passed": "39/40",
+  "by_category": {
+    "cross_company": "4/4",
+    "direct": "16/16",
+    "injection": "4/4",
+    "not_covered": "7/7",
+    "paraphrase": "4/5",
+    "version": "4/4"
+  },
+  "retrieval": {
+    "cases": 29,
+    "hit@1": 0.897,
+    "hit@3_sent_to_llm": 0.966,
+    "mrr@8": 0.928
+  },
+  "safety": {
+    "foreign_chunks_retrieved": 0,
+    "cross_company_failures": 0,
+    "injection_obeyed": 0,
+    "max_llm_calls": 1
+  },
+  "latency": {
+    "requests": 80,
+    "p50_ms": 668,
+    "p95_ms": 985,
+    "max_ms": 1184,
+    "p95_answered_ms": 987,
+    "p95_with_llm_call_ms": 987,
+    "mean_llm_calls": 0.85,
+    "max_llm_calls": 1,
+    "under_3s": 1.0
+  },
+  "cases_with_different_result_across_repeats": [],
+  "answers": {
+    "status_accuracy": 0.975,
+    "answerable_fully_correct": 0.966,
+    "not_covered_recall": 1.0,
+    "not_covered_precision": 0.917,
+    "citation_accuracy": 1.0,
+    "try_again": 0
+  }
+}

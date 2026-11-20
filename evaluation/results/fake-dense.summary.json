@@ -1,0 +1,44 @@
+{
+  "run": {
+    "llm": "fake",
+    "model": "fake",
+    "retrieval": "dense",
+    "repeat": 1,
+    "cases": 40,
+    "finished_at": "2026-11-20T16:05:37+00:00",
+    "wall_clock_s": 3
+  },
+  "passed": "38/40",
+  "by_category": {
+    "cross_company": "4/4",
+    "direct": "16/16",
+    "injection": "4/4",
+    "not_covered": "7/7",
+    "paraphrase": "4/5",
+    "version": "3/4"
+  },
+  "retrieval": {
+    "cases": 29,
+    "hit@1": 0.828,
+    "hit@3_sent_to_llm": 0.931,
+    "mrr@8": 0.88
+  },
+  "safety": {
+    "foreign_chunks_retrieved": 0,
+    "cross_company_failures": 0,
+    "injection_obeyed": null,
+    "max_llm_calls": 1
+  },
+  "latency": {
+    "requests": 40,
+    "p50_ms": 7,
+    "p95_ms": 9,
+    "max_ms": 10,
+    "p95_answered_ms": 9,
+    "p95_with_llm_call_ms": 9,
+    "mean_llm_calls": 0.85,
+    "max_llm_calls": 1,
+    "under_3s": 1.0
+  },
+  "cases_with_different_result_across_repeats": []
+}
