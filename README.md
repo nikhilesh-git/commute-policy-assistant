@@ -35,6 +35,11 @@ docker compose run --rm api python -m evaluation.run_eval --llm groq --repeat 2 
 
 Results and the full report: [EVALUATION.md](EVALUATION.md).
 
+**Evaluation set (submission file):** [`evaluation/results/groq-hybrid.jsonl`](evaluation/results/groq-hybrid.jsonl):
+40 cases, one per line, with the fields `id, input, expected, actual, pass, notes`, from the
+real model with the shipped configuration. (`evaluation/cases.jsonl` holds the same cases
+without results; it is the input the runner reads.)
+
 ### Try it
 
 Demo users (local demo database only), password `demo1234`:

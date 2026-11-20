@@ -20,7 +20,8 @@ Each run starts from a fresh temporary database, ingests the three v1 policies,
 runs the `initial` cases, uploads Nimbus v2 through the admin API, then runs the
 `after_nimbus_v2` cases. Results land in `evaluation/results/`:
 
-- `<llm>-<retrieval>.jsonl`: one line per case with exactly `id, input, expected, actual, pass, notes`
+- `<llm>-<retrieval>.jsonl`: one line per case with exactly `id, input, expected, actual, pass, notes`.
+  **The submission file is `groq-hybrid.jsonl`** (real model, shipped configuration).
 - `<llm>-<retrieval>.summary.json`: the aggregate numbers below
 
 ## The evaluation set
